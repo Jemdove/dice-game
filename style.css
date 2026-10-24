@@ -7,6 +7,8 @@
   .dice {
     text-align: center;
     display: inline-block;
+    width: 45%;          /* two dice always fit side by side */
+    vertical-align: top;
   }
   
   body {
@@ -37,4 +39,60 @@
     color: #EEEEEE;
     text-align: center;
     font-family: 'Indie Flower', cursive;
+  }
+
+
+  /* =====================================================
+     MEDIA QUERIES
+     Everything gets smaller as the screen gets narrower.
+     ===================================================== */
+
+  /* Tablets and small laptops (900px wide or less) */
+  @media (max-width: 900px) {
+    .container {
+      width: 85%;
+    }
+
+    h1 {
+      font-size: 5rem;
+    }
+
+    p {
+      font-size: 2.2rem;
+    }
+  }
+
+  /* Phones (600px wide or less) */
+  @media (max-width: 600px) {
+    .container {
+      width: 95%;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin: 20px 0;
+      margin-top: 12%;
+      text-shadow: 3px 0 #232931;
+    }
+
+    p {
+      font-size: 1.6rem;
+      margin: 10px 0;
+    }
+
+    footer {
+      margin-top: 12%;
+      padding-bottom: 20px;
+    }
+  }
+
+  /* Small phones (380px wide or less) */
+  @media (max-width: 380px) {
+    h1 {
+      font-size: 2.8rem;
+    }
+
+    p {
+      font-size: 1.3rem;
+    }
   }
