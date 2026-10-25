@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" href="style.css">
 
     <!-- Link Google fonts -->
@@ -11,25 +11,38 @@
     <!-- Link font awesome library -->
     <link rel="stylesheet" href="fonts/css/all.css" type="text/css">
 
+    <!-- Dice icon in the browser tab (and on phone home screens) -->
+    <link rel="icon" href="images/favicon.ico" type="image/png" sizes="32x32">
+
     <title>Dice Game</title>
 </head>
 
-<body >
-    <div class="container">
-        <h1>Refresh Me</h1> 
+<body>
+    <!-- =========================================================
+         BACKGROUND MUSIC: PUT YOUR MUSIC FILE HERE
+         1. Make a folder called "sounds" next to this index.html
+         2. Put your song in it and name it: background-music.mp3
+            (or change the src below to your file's name)
+         ========================================================= -->
+    <audio id="bgMusic" src="sounds/Summer Sound.mpga" loop></audio>
 
-      <div class="dice"> 
-          <p>Player 1</p>
-          <img class="img1" src="./images/dice6.png">
+    <div class="container">
+        <h1>Roll the Dice!</h1>
+
+      <div class="dice">
+          <p class="p1">Player 1</p>
+          <img class="img1" src="./images/dice6.png" alt="Player 1 dice">
       </div>
 
        <div class="dice"> <!-- div for P2 -->
           <p class="p2">Player 2</p>
-          <img class="img2" src="./images/dice6.png">
+          <img class="img2" src="./images/dice6.png" alt="Player 2 dice">
        </div>
 
+        <!-- Play button: rolls both dice -->
+        <button type="button" id="rollBtn" class="roll-btn">🎲 Roll Dice</button>
     </div>
- 
+
     <footer>
         www 🎲 Dicee Game 🎲 com
     </footer>
