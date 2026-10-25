@@ -43,6 +43,86 @@
 
 
   /* =====================================================
+     ROLL BUTTON
+     ===================================================== */
+  .roll-btn {
+    display: block;
+    margin: 30px auto 0;
+    padding: 14px 40px;
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    color: #232931;
+    background-color: #4ECCA3;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 6px 0 #232931;
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+
+  .roll-btn:hover {
+    background-color: #6ee0bb;
+  }
+
+  /* pushes down when pressed */
+  .roll-btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #232931;
+  }
+
+
+
+
+  /* =====================================================
+     DICE SHAKE (plays on every roll)
+     ===================================================== */
+  .rolling img {
+    animation: shake 0.5s;
+  }
+
+  @keyframes shake {
+    0%   { transform: rotate(0deg); }
+    20%  { transform: rotate(-15deg); }
+    40%  { transform: rotate(12deg); }
+    60%  { transform: rotate(-8deg); }
+    80%  { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+
+  /* =====================================================
+     RESULT COLOURS
+     JS puts one of these classes on <body> after each roll.
+     ===================================================== */
+  .p1-wins {
+    background-color: #14213d;
+  }
+
+  .p1-wins h1,
+  .p1-wins .p1 {
+    color: lightblue;
+  }
+
+  .p2-wins {
+    background-color: #3d405b;
+  }
+
+  .p2-wins h1,
+  .p2-wins .p2 {
+    color: salmon;
+  }
+
+  /* draw: keeps the normal colours */
+
+  /* smooth colour change between rolls */
+  body,
+  h1,
+  p {
+    transition: background-color 0.4s, color 0.4s;
+  }
+
+
+  /* =====================================================
      MEDIA QUERIES
      Everything gets smaller as the screen gets narrower.
      ===================================================== */
@@ -83,6 +163,12 @@
     footer {
       margin-top: 12%;
       padding-bottom: 20px;
+    }
+
+    .roll-btn {
+      font-size: 1.5rem;
+      padding: 12px 32px;
+      margin-top: 24px;
     }
   }
 
