@@ -7,7 +7,7 @@
   .dice {
     text-align: center;
     display: inline-block;
-    width: 45%;          /* two dice always fit side by side */
+    width: 35%;          /* two dice always fit side by side */
     vertical-align: top;
   }
   
@@ -25,6 +25,7 @@
   }
   
   p {
+    margin-top:1%;
     font-size: 3rem;
     color: #4ECCA3;
     font-family: 'Indie Flower', cursive;
